@@ -11,7 +11,17 @@ async function getRandomQuote() {
         return null;
     }
 }
-
+(async function()
+{
+   console.log("45459+6");
+   const quote = await getRandomQuote();
+    if (quote) {
+		var container =  `<p class="fs-1">"${quote}"</p>`;
+		document.getElementById("demo").innerHTML = container; 
+    } else {
+        updateQuoteDisplay('Failed to fetch quote.');
+    }
+})();
 
 quoteButton.addEventListener('click', async () => {
     const quote = await getRandomQuote();
