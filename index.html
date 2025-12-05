@@ -2,21 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Quotes App</title>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <!-- Bootstrap CSS for styling -->
+        /* A little custom style to center everything */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+        #quoteContainer {
+            min-height: 150px; /* Prevents layout shift when quote length changes */
+        }
+    </style>
+    <!-- Link to your custom CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="item w-100 text-center">
-        
-            <h1 class="m-5">Quote of the Day</h1>
-            <p class="fs-1 m-4">Press the button below to recieve a random quote!</p>
-            <button type="button" id="quoteButton" class="rounded-0 btn btn-p border-2 m-4">New Quote</button>
-            <div id="demo">
+<body class="text-center">
+    <main class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="mb-4">Random Quote</h1>
+                
+                <!-- Container where the quote will be displayed -->
+                <blockquote id="quoteContainer" class="blockquote p-4 shadow-sm">
+                <!-- The paragraph for the quote text will be inserted here by JavaScript -->
+                </blockquote>
+
+                <!-- Button to fetch a new quote -->
+                <button id="quoteButton" class="btn btn-primary mt-3">Get New Quote</button>
             </div>
-        
-    </div>
+        </div>
+    </main>
+
+    <!-- Your JavaScript file -->
     <script src="index.js"></script>
 </body>
 </html>
