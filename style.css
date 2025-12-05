@@ -2,6 +2,14 @@
 /* Import the "Anton" font from Google Fonts to make it available for use. */
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
+/* A little custom style to center everything */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
 /* --- Element Styling --- */
 
 /* Style the main heading of the page */
@@ -40,6 +48,7 @@ h1 {
     border-left: 5px solid #198754; /* Use the button's green for a consistent theme */
     border-radius: 0.5rem; /* Slightly rounded corners */
     transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the shadow */
+    min-height: 150px; /* Prevents layout shift when quote length changes */
 }
 
 /* Enhance the shadow on hover for a bit of interactivity */
